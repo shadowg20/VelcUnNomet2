@@ -40,6 +40,20 @@ public class DragDropSkripts : MonoBehaviour, IPointerDownHandler, IBeginDragHan
 
 	public void OnEndDrag(PointerEventData notikums){
 		Debug.Log ("Beigta objekta vilkšana!");
-	//Rīt turpināsim
+		kanvasGrupa.alpha = 1f;
+
+		//Ja objekts nebija nolikts ītajā vietā
+		if (objektuSkripts.vaiIstajaVieta == false) {
+			//Tad to atkal var vilkt
+			kanvasGrupa.blocksRaycasts = true;
+		
+			//Ja nolikts ītajā vietā
+		} else {
+			//Aizmirst pēdejo objektu, kas vilkts
+			objektuSkripts.pedejaisVIlktais = null;
+		}
+		//Ja viens objekts nolikts īstajā vieta, tad lai varētu turpināt vilkt pārejos
+		//iestata uz false
+		objektuSkripts.vaiIstajaVieta = false;
 	}
 }
