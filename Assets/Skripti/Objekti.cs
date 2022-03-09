@@ -30,11 +30,8 @@ public class Objekti : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		atkrKoord = atkritumuMasina.GetComponent<RectTransform> ().localPosition;
+		atroKoord = atraPalidziba.GetComponent<RectTransform> ().localPosition;
+		bussKoord = autobuss.GetComponent<RectTransform> ().localPosition;
 	}
 }
