@@ -58,6 +58,39 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
 						break;
 
+					case "b2maja":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [4]);
+						break;
+
+					case "buve":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [5]);
+						break;
+
+					case "e46maja":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [6]);
+						break;
+
+					case "celabuv":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [7]);
+						break;
+
+					case "policijustacija":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [8]);
+						break;
+
+					case "fermatrak":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [9]);
+						break;
+
+					case "dzivniekitrak":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [10]);
+						break;
+
+					case "majadeg":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [11]);
+						break;
+
+
 					default:
 						Debug.Log ("Nedefinēts tags!");
 						break;
@@ -87,7 +120,47 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					= objektuSkripts.bussKoord;
 					break;
 
-				default:
+				case "b2maja":
+					objektuSkripts.b2.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.b2Koord;
+					break;
+
+				case "buve":
+					objektuSkripts.cementaMasina.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.cementaKoord;
+					break;
+
+				case "e46maja":
+					objektuSkripts.e46.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.e46Koord;
+					break;
+
+				case "celabuv":
+					objektuSkripts.ekskavators.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.ekskaKoord;
+					break;
+
+				case "policijustacija":
+					objektuSkripts.policija.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.poliKoord;
+					break;
+
+				case "fermatrak":
+					objektuSkripts.traktors1.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.trak1Koord;
+					break;
+
+				case "dzivniekitrak":
+					objektuSkripts.traktorsS.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.trakSKoord;
+					break;
+
+				case "majadeg":
+					objektuSkripts.Ugunsdzesejs.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.UgunKoord;
+					break;
+
+					default:
 					Debug.Log ("Nedefinēts tags!");
 					break;
 				}

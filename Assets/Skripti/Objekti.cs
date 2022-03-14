@@ -9,7 +9,14 @@ public class Objekti : MonoBehaviour {
 	public GameObject atkritumuMasina;
 	public GameObject atraPalidziba;
 	public GameObject autobuss;
-
+	public GameObject b2;
+	public GameObject cementaMasina;
+	public GameObject e46;
+	public GameObject ekskavators;
+	public GameObject policija;
+	public GameObject traktors1;
+	public GameObject traktorsS;
+	public GameObject Ugunsdzesejs;
 	//Uzglabā velakmo objektu sākotnējās atrašanās vietas koordinātas
 	[HideInInspector]
 	public Vector2 atkrKoord;
@@ -17,6 +24,22 @@ public class Objekti : MonoBehaviour {
 	public Vector2 atroKoord;
 	[HideInInspector]
 	public Vector2 bussKoord;
+	[HideInInspector]
+	public Vector2 b2Koord;
+	[HideInInspector]
+	public Vector2 cementaKoord;
+	[HideInInspector]
+	public Vector2 e46Koord;
+	[HideInInspector]
+	public Vector2 ekskaKoord;
+	[HideInInspector]
+	public Vector2 poliKoord;
+	[HideInInspector]
+	public Vector2 trak1Koord;
+	[HideInInspector]
+	public Vector2 trakSKoord;
+	[HideInInspector]
+	public Vector2 UgunKoord;
 
 	//Uzglabās audio avotu, kurā atskaņot attēlu skaņas efektus
 	public AudioSource skanasAvots;
@@ -33,5 +56,13 @@ public class Objekti : MonoBehaviour {
 		atkrKoord = atkritumuMasina.GetComponent<RectTransform> ().localPosition;
 		atroKoord = atraPalidziba.GetComponent<RectTransform> ().localPosition;
 		bussKoord = autobuss.GetComponent<RectTransform> ().localPosition;
+		b2Koord = b2.GetComponent<RectTransform> ().localPosition;
+		cementaKoord = cementaMasina.GetComponent<RectTransform> ().localPosition;
+		e46Koord = e46.GetComponent<RectTransform> ().localPosition;
+		ekskaKoord = ekskavators.GetComponent<RectTransform> ().localPosition;
+		poliKoord = policija.GetComponent<RectTransform> ().localPosition;
+		trak1Koord = traktors1.GetComponent<RectTransform> ().localPosition;
+		trakSKoord = traktorsS.GetComponent<RectTransform> ().localPosition;
+		UgunKoord = Ugunsdzesejs.GetComponent<RectTransform> ().localPosition;
 	}
 }
