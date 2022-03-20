@@ -17,6 +17,9 @@ public class Objekti : MonoBehaviour {
 	public GameObject traktors1;
 	public GameObject traktorsS;
 	public GameObject Ugunsdzesejs;
+	public GameObject Uzvara;
+	public int punkti=0;
+	public int punktimax = 11;
 	//Uzglabā velakmo objektu sākotnējās atrašanās vietas koordinātas
 	[HideInInspector]
 	public Vector2 atkrKoord;
@@ -64,5 +67,6 @@ public class Objekti : MonoBehaviour {
 		trak1Koord = traktors1.GetComponent<RectTransform> ().localPosition;
 		trakSKoord = traktorsS.GetComponent<RectTransform> ().localPosition;
 		UgunKoord = Ugunsdzesejs.GetComponent<RectTransform> ().localPosition;
+		Uzvara.SetActive (false);
 	}
 }

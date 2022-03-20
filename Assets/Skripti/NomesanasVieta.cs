@@ -48,46 +48,57 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					switch (notikums.pointerDrag.tag) {
 					case "Atkritumi":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [1]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "Slimnica":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [2]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "Skola":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "b2maja":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [4]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "buve":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [5]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "e46maja":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [6]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "celabuv":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [7]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "policijustacija":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [8]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "fermatrak":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [9]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "dzivniekitrak":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [10]);
+						objektuSkripts.punkti++;
 						break;
 
 					case "majadeg":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [11]);
+						objektuSkripts.punkti++;
 						break;
 
 
@@ -164,7 +175,9 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					Debug.Log ("Nedefinēts tags!");
 					break;
 				}
-
+				if (objektuSkripts.punkti == objektuSkripts.punktimax) {
+					objektuSkripts.Uzvara.SetActive(true);
+				}
 			}
 		}
 	}
