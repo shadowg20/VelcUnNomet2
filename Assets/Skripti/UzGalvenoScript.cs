@@ -8,6 +8,6 @@ public class UzGalvenoScript : MonoBehaviour {
 	//Izdarot klikski uz pogas "uzIzvelni", tiks atverta aina "galvenaAina"
 	public void uzGalveno ()
 	{
-		SceneManager.LoadScene (0, LoadSceneMode.Single);
+		SceneManager.LoadScene (1, LoadSceneMode.Single);
 	}
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class NomesanasVieta : MonoBehaviour, IDropHandler {
@@ -175,10 +176,27 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					Debug.Log ("Nedefinēts tags!");
 					break;
 				}
-				if (objektuSkripts.punkti == objektuSkripts.punktimax) {
-					objektuSkripts.Uzvara.SetActive(true);
 				}
 			}
-		}
+//Nosaka vai spele ir beigusies
+if (objektuSkripts.punkti == 11) {
+	//parada uzvara un laiku, lauj restartet
+	objektuSkripts.laiksir = false;
+	objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [12]);
+	objektuSkripts.Uzvara.SetActive (true);
+	objektuSkripts.nojauna.SetActive (true);
+	objektuSkripts.rezult.GetComponent<Text>().enabled = true;
+			objektuSkripts.rezult.text = Mathf.Round(objektuSkripts.laiks).ToString()+" sec";
+	//Pec speles ilguma nosaka cik zvaigznes dabusi
+	if (objektuSkripts.laiks <= 360) {
+		objektuSkripts.Zvaigzne1.SetActive (true);
 	}
+	if (objektuSkripts.laiks <= 240) {
+		objektuSkripts.Zvaigzne2.SetActive (true);
+	}
+	if (objektuSkripts.laiks <= 120) {
+		objektuSkripts.Zvaigzne3.SetActive (true);
+	}
+}
+}
 }

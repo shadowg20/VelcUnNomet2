@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Objekti : MonoBehaviour {
 	//Uzglabā ainā esošo kanvu
@@ -18,8 +19,15 @@ public class Objekti : MonoBehaviour {
 	public GameObject traktorsS;
 	public GameObject Ugunsdzesejs;
 	public GameObject Uzvara;
+	public GameObject Zvaigzne1;
+	public GameObject Zvaigzne2;
+	public GameObject Zvaigzne3;
+	public GameObject nojauna;
+	public float laiks;
+	public bool laiksir=true;
+	public Text rezult;
+
 	public int punkti=0;
-	public int punktimax = 11;
 	//Uzglabā velakmo objektu sākotnējās atrašanās vietas koordinātas
 	[HideInInspector]
 	public Vector2 atkrKoord;
@@ -68,5 +76,10 @@ public class Objekti : MonoBehaviour {
 		trakSKoord = traktorsS.GetComponent<RectTransform> ().localPosition;
 		UgunKoord = Ugunsdzesejs.GetComponent<RectTransform> ().localPosition;
 		Uzvara.SetActive (false);
+		Zvaigzne1.SetActive (false);
+		Zvaigzne2.SetActive (false);
+		Zvaigzne3.SetActive (false);
+		nojauna.SetActive (false);
+		rezult.GetComponent<Text> ().enabled = false;
 	}
 }
